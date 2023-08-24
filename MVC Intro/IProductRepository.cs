@@ -1,0 +1,20 @@
+﻿
+using System;
+using System.Collections.Generic;
+using MVC_Intro.Models;
+using Testing.Models;
+
+namespace MVC_Intro
+
+{
+    public interface IProductRepository
+    {
+        public IEnumerable<Product> GetAllProducts();
+        public Product GetProduct(int id);
+        public void UpdateProduct(Product product);
+        public void InsertProduct(Product productToInsert);
+        public IEnumerable<Category> GetCategories();
+        public Product AssignCategory();
+        public void DeleteProduct(Product product);
+    }
+}
